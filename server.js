@@ -47,9 +47,10 @@ app.post('/shopping-list', jsonParser, (req, res) => {
   res.status(201).json(item);
 });
 
+
 app.delete('/shopping-list/:id', (req, res) => {
   ShoppingList.delete(req.params.id);
-  console.log(`Deleted shopping list item \`${req.params.id}\``);
+  console.log(`Deleted shopping list item \`${req.params.ID}\``);
   res.status(204).end();
 });
 
